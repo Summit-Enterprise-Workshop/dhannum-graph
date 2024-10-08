@@ -29,10 +29,12 @@ type User @key(fields: "id") {
   email: String!
     @tag(name: "private")
     @override(from: "orders", label: "percent(50)")
+
   """
   The user's active cart session. Once the cart items have been purchases, they transition to an Order
   """
   activeCart: Cart
+
   """
   The users previous purchases
   """
